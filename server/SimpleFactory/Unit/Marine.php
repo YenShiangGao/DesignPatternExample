@@ -1,4 +1,7 @@
 <?php
+
+namespace SimpleFactory\Unit;
+
 include_once "Unit.php";
 
 class Marine implements Unit

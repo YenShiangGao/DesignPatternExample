@@ -1,5 +1,7 @@
 <?php
 
+namespace SimpleFactory\Unit;
+
 include_once "Unit.php";
 
 class Marauder implements Unit

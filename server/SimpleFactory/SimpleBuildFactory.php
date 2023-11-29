@@ -1,6 +1,10 @@
 <?php
-include_once "Marauder.php";
-include_once "Marine.php";
+
+use SimpleFactory\Unit\Marauder;
+use SimpleFactory\Unit\Marine;
+
+include_once "./Unit/Marauder.php";
+include_once "./Unit/Marine.php";
 
 class SimpleBuildFactory
 {

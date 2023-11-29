@@ -6,7 +6,7 @@ use FactoryPatterm\Unit\Aircraft;
 
 class AirportFactory extends FactoryMethod
 {
-    public function outputUnit()
+    public function outputUnit(): Aircraft
     {
         $aircraft = new Aircraft();
         $aircraft->build();
