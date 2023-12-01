@@ -2,9 +2,6 @@
 
 ```mermaid
 classDiagram
-    index o-- CommandCenter
-    index o-- Barrack
-    index o-- Airport
     BuildFactory <|-- CommandCenter
     BuildFactory <|-- Barrack
     BuildFactory <|-- Airport
@@ -20,10 +17,7 @@ classDiagram
     Barrack --> ProtossZealot
     ProtossPhoenix ..|> ProtossUnit
     Airport --> ProtossPhoenix
-
-    class index {
-        
-    }
+    
     class BuildFactory {
         <<abstract>>
         +outputTerranUnit()*
