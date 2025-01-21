@@ -1,6 +1,6 @@
 <?php
 
-namespace FactoryPatterm\Unit;
+namespace FactoryPatterm\Product;
 interface UnitInterface
 {
     public function playSlogan();

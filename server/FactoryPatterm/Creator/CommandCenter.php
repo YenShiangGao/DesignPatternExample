@@ -1,11 +1,11 @@
 <?php
-namespace FactoryPatterm\BuildFactory;
+namespace FactoryPatterm\Creator;
 
-use FactoryPatterm\Unit\Worker;
+use FactoryPatterm\Product\Worker;
 
 require_once __DIR__.'/FactoryMethod.php';
 
-class CommandCenterFactory extends FactoryMethod
+class CommandCenter extends FactoryMethod
 {
     public function outputUnit(): Worker
     {

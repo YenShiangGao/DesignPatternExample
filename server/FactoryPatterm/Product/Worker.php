@@ -1,11 +1,12 @@
 <?php
 
-namespace FactoryPatterm\Unit;
+namespace FactoryPatterm\Product;
 
 require_once __DIR__.'/UnitInterface.php';
 
 class Worker implements UnitInterface
 {
+    const NAME = 'Worker';
 
     public function playSlogan()
     {
