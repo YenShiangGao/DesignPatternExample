@@ -1,28 +1,34 @@
 <?php
+
+use AbstractFactory\Factory\BuildFactory;
+
 require_once __DIR__.'/Factory/CommandCenter.php';
 require_once __DIR__.'/Factory/Barrack.php';
 require_once __DIR__.'/Factory/Airport.php';
 
-# 兵營
-$barrack = new \AbstractFactory\Factory\Barrack();
-$terranUnit = $barrack->outputTerranUnit();
-$protossUnit = $barrack->outputProtossUnit();
 
-$terranUnit->playSlogan();
-$protossUnit->shout();
+function switchCamp(BuildFactory $factory)
+{
+    $terranUnit = $factory->outputTerranUnit();
+    $protossUnit = $factory->outputProtossUnit();
 
-# 指揮中心
-$commandCenter = new \AbstractFactory\Factory\CommandCenter();
-$terranUnit = $commandCenter->outputTerranUnit();
-$protossUnit = $commandCenter->outputProtossUnit();
+    $terranUnit->playSlogan();
+    $protossUnit->shout();
 
-$terranUnit->playSlogan();
-$protossUnit->shout();
+}
 
-# 衛星港
-$airport = new \AbstractFactory\Factory\Airport();
-$terranUnit = $airport->outputTerranUnit();
-$protossUnit = $airport->outputProtossUnit();
+$input = ['CommandCenter', 'Barrack', 'Airport'];
 
-$terranUnit->playSlogan();
-$protossUnit->shout();
+$input = $input[array_rand($input)];
+
+switch ($input) {
+    case 'CommandCenter':
+        switchCamp(new \AbstractFactory\Factory\CommandCenter());
+        break;
+    case 'Barrack':
+        switchCamp(new \AbstractFactory\Factory\Barrack());
+        break;
+    case 'Airport':
+        switchCamp(new \AbstractFactory\Factory\Airport());
+        break;
+}
