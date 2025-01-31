@@ -5,7 +5,7 @@ classDiagram
         -__construct()
         -__clone()
         -__wakeup()
-        +getInstance() Hero$
+        +getInstance() array$
     }
 ```
 
