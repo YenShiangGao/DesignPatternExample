@@ -1,4 +1,3 @@
-version: '3'
 services:
   nginx:
     image: nginx:latest
@@ -15,13 +14,3 @@ services:
     build: ./docker/php
     volumes:
       - ./server:/var/www/:delegated
-
-  db:
-    image: mariadb:latest
-    environment:
-      - MYSQL_ROOT_PASSWORD=password
-      - TZ=Asia/Taipei
-    volumes:
-      - ./docker/mysql/data/:/var/lib/mysql
-    ports:
-      - 3306:3306
