@@ -1,6 +1,6 @@
 <?php
 
 
-    interface Food {
+    interface FoodInterface {
         public function cost();
     }
