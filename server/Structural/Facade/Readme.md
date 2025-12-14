@@ -115,4 +115,4 @@ Laravel 的 Facade 依賴 PHP 的魔術方法 `__callStatic()`。
    4. 最後在這個實例上呼叫 `get()` 方法。
 
 ### 總結
-Laravel 的 Facade 提供了一個「靜態代理（Static Proxy）」的語法糖，讓開發者可以用簡潔的靜態語法來使用底層複雜的動態物件，這完美體現了外觀模式「簡化介面」的精神，同時利用 Service Container 保持了可測試性與彈性。
+Laravel 的 Facade 提供了一個「靜態代理（Static Proxy）」的語法糖，讓開發者可以用簡潔的靜態語法來使用底層複雜的動態物件，這完美體現了外觀模式「簡化介面」的精神，同時利用 Service Container 保持了可測試性與彈性，等等我們將會使用上述例子，來示範假如以Laravel架構實現核彈打擊會是什麼樣子。
