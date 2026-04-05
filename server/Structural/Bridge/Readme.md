@@ -1,33 +1,38 @@
 ```mermaid
 classDiagram
-    class WeaponRenderer {
+    class DialogRenderInterface {
         <<interface>>
-        +render(name: string): string
+        +render(characterName: string, script: string): string
     }
 
-    class TextRenderer ~WeaponRenderer~ {
-        +render(name: string): string
+    class TextRender ~DialogRenderInterface~ {
+        +render(characterName: string, script: string): string
     }
 
-    class JsonRenderer ~WeaponRenderer~ {
-        +render(name: string): string
+    class VoiceRender ~DialogRenderInterface~ {
+        +render(characterName: string, script: string): string
     }
 
-    class Weapon {
+    class CharacterDialogBridge {
         <<abstract>>
-        -renderer: WeaponRenderer
-        +__construct(renderer: WeaponRenderer)
-        +draw(): string
+        -dialogRender: DialogRenderInterface
+        +__construct(dialogRender: DialogRenderInterface)
+        +present(): string
     }
 
-    class Sword {
-        +draw(): string
+    class LaezelDialog {
+        +present(): string
     }
 
-    Weapon --> WeaponRenderer
-    WeaponRenderer <|.. TextRenderer : concrete
-    WeaponRenderer <|.. JsonRenderer : concrete
-    Weapon <|-- Sword
+    class ShadowHeartDialog {
+        +present(): string
+    }
+
+    CharacterDialogBridge --> DialogRenderInterface
+    DialogRenderInterface <|.. TextRender : concrete
+    DialogRenderInterface <|.. VoiceRender : concrete
+    CharacterDialogBridge <|-- LaezelDialog
+    CharacterDialogBridge <|-- ShadowHeartDialog
     
 ```
 ## 何謂橋接模式

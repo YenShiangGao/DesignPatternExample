@@ -5,7 +5,7 @@ classDiagram
     Barrack --|> FactoryMethod : 繼承
     Airport --|> FactoryMethod : 繼承
     Worker ..|> UnitInterface : 實作UnitInterface
-    Solider ..|> UnitInterface : 實作UnitInterface
+    Soldier ..|> UnitInterface : 實作UnitInterface
     Aircraft ..|> UnitInterface : 實作UnitInterface
     class FactoryMethod {
         <<abstract>>
@@ -29,7 +29,7 @@ classDiagram
         +String NAME$ 
         +playSlogan()
     }
-    class Solider ~UnitInterface~ {
+    class Soldier ~UnitInterface~ {
         +String Name$
         +playSlogan()
     }

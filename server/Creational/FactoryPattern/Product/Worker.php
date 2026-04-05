@@ -1,6 +1,6 @@
 <?php
 
-namespace FactoryPatterm\Product;
+namespace FactoryPattern\Product;
 
 require_once __DIR__.'/UnitInterface.php';
 

@@ -1,8 +1,8 @@
 ```mermaid
 classDiagram
     BuildCenter ..> SimpleBuildFactory : 呼叫該靜態方法
-    SimpleBuildFactory o-- Marauder : 呼叫其物件
-    SimpleBuildFactory o-- Marine : 呼叫其物件
+    SimpleBuildFactory --> Marauder : creates
+    SimpleBuildFactory --> Marine : creates
     Marauder ..|> Unit : 實作Unit
     Marine ..|> Unit : 實作Unit
     class BuildCenter{

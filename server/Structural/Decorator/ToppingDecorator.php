@@ -1,4 +1,7 @@
 <?php
+
+namespace Decorator;
+
 require_once __DIR__ . '/FoodInterface.php';
 
 abstract class ToppingDecorator implements FoodInterface

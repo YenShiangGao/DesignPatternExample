@@ -9,7 +9,9 @@
       "Bash(mkdir -p D:/DesignPatternExample/docs/creational)",
       "Bash(npm install:*)",
       "Bash(npx vitepress:*)",
-      "Bash(ls D:/DesignPatternExample/docs/.vitepress/dist/assets/*.js)"
+      "Bash(ls D:/DesignPatternExample/docs/.vitepress/dist/assets/*.js)",
+      "Bash(find:*)",
+      "Bash(mv:*)"
     ]
   }
 }

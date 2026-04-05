@@ -3,10 +3,10 @@ require_once __DIR__.'/Creator/CommandCenter.php';
 require_once __DIR__.'/Creator/Barrack.php';
 require_once __DIR__.'/Creator/Airport.php';
 
-use FactoryPatterm\Creator\Airport;
-use FactoryPatterm\Creator\Barrack;
-use FactoryPatterm\Creator\CommandCenter;
-use FactoryPatterm\Creator\FactoryMethod;
+use FactoryPattern\Creator\Airport;
+use FactoryPattern\Creator\Barrack;
+use FactoryPattern\Creator\CommandCenter;
+use FactoryPattern\Creator\FactoryMethod;
 
 function summon(FactoryMethod $creator)
 {

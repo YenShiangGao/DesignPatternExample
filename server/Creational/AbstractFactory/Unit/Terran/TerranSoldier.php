@@ -2,7 +2,7 @@
 
 namespace AbstractFactory\Unit\Terran;
 require_once 'TerranUnit.php';
-class TerranSolider extends TerranUnit
+class TerranSoldier extends TerranUnit
 {
 
     public function playSlogan()

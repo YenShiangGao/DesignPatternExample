@@ -30,7 +30,7 @@ class TerranUnitBuilder implements UnitBuilderInterface
 
     public function setDefense(int $defense): UnitBuilderInterface
     {
-        $this->unit->armor = $defense;
+        $this->unit->defense = $defense;
         return $this;
     }
 
@@ -42,6 +42,8 @@ class TerranUnitBuilder implements UnitBuilderInterface
 
     public function build(): Unit
     {
-        return $this->unit;
+        $result = $this->unit;
+        $this->unit = new Unit();
+        return $result;
     }
 }

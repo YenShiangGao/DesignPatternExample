@@ -4,17 +4,17 @@ namespace AbstractFactory\Factory;
 
 require_once 'BuildFactory.php';
 require_once dirname(__DIR__).'/Unit/Protoss/ProtossZealot.php';
-require_once dirname(__DIR__).'/Unit/Terran/TerranSolider.php';
+require_once dirname(__DIR__).'/Unit/Terran/TerranSoldier.php';
 
 use AbstractFactory\Unit\Protoss\ProtossZealot;
-use AbstractFactory\Unit\Terran\TerranSolider;
+use AbstractFactory\Unit\Terran\TerranSoldier;
 
 class Barrack extends BuildFactory
 {
 
-    public function outputTerranUnit(): TerranSolider
+    public function outputTerranUnit(): TerranSoldier
     {
-        return new TerranSolider();
+        return new TerranSoldier();
     }
 
     public function outputProtossUnit(): ProtossZealot

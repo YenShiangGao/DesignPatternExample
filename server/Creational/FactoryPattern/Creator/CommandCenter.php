@@ -1,7 +1,7 @@
 <?php
-namespace FactoryPatterm\Creator;
+namespace FactoryPattern\Creator;
 
-use FactoryPatterm\Product\Worker;
+use FactoryPattern\Product\Worker;
 
 require_once __DIR__.'/FactoryMethod.php';
 

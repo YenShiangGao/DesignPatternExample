@@ -1,8 +1,8 @@
 <?php
 
-namespace FactoryPatterm\Creator;
+namespace FactoryPattern\Creator;
 
-use FactoryPatterm\Product\Aircraft;
+use FactoryPattern\Product\Aircraft;
 
 class Airport extends FactoryMethod
 {

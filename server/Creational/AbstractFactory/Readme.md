@@ -7,8 +7,8 @@ classDiagram
     BuildFactory <|-- Airport
     TerranWorker ..|> TerranUnit
     CommandCenter --> TerranWorker
-    TerranSolider ..|> TerranUnit
-    Barrack --> TerranSolider
+    TerranSoldier ..|> TerranUnit
+    Barrack --> TerranSoldier
     TerranAircraft ..|> TerranUnit
     Airport --> TerranAircraft
     ProtossWorker ..|> ProtossUnit
@@ -28,7 +28,7 @@ classDiagram
         +outputProtossUnit() ProtossWorker
     }
     class Barrack ~BuildFactory~ {
-        +outputTerranUnit() TerranSolider
+        +outputTerranUnit() TerranSoldier
         +outputProtossUnit() ProtossZealot
     }
     class Airport ~BuildFactory~ {
@@ -42,7 +42,7 @@ classDiagram
     class TerranWorker ~TerranUnit~ {
         +playSlogan()
     }
-    class TerranSolider ~TerranUnit~ {
+    class TerranSoldier ~TerranUnit~ {
         +playSlogan()
     }
     class TerranAircraft ~TerranUnit~ {

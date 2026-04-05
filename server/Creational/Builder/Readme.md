@@ -2,23 +2,35 @@
 
 ```mermaid
 classDiagram
-    UnitBuilder <|-- MarineBuilder
-    
-    class UnitBuilder {
-        << interface >>
-        +setHealthPoint()*
-        +setWeapon()*
-        +setArmor()*
-        +setShoes()*
+    UnitBuilderInterface <|.. TerranUnitBuilder
+    TerranUnitBuilder --> Unit : builds
+    UnitDirector --> UnitBuilderInterface : uses
+
+    class UnitBuilderInterface {
+        <<interface>>
+        +setName(string) UnitBuilderInterface
+        +setHealth(int) UnitBuilderInterface
+        +setAttack(int) UnitBuilderInterface
+        +setDefense(int) UnitBuilderInterface
+        +setSpeed(int) UnitBuilderInterface
+        +build() Unit
     }
-    class MarineBuilder ~SoliderUnitBuilder~ {
-        +MarineBuilder $marineBuilder
+    class TerranUnitBuilder {
+        #Unit unit
         +__construct()
-        +reset()
-        +setHealthPoint()
-        +setWeapon()
-        +setArmor()
-        +setShoes()
+        +build() Unit
+    }
+    class Unit {
+        +string name
+        +int health
+        +int attack
+        +int defense
+        +int speed
+        +describe() string
+    }
+    class UnitDirector {
+        +createMarine(UnitBuilderInterface) Unit
+        +createFirebat(UnitBuilderInterface) Unit
     }
 ```
 

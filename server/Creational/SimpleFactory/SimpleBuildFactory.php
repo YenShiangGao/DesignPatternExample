@@ -12,8 +12,10 @@ class SimpleBuildFactory
         switch ($type) {
             case "marauder":
                 return new Marauder();
-            case "Marine":
+            case "marine":
                 return new Marine();
+            default:
+                throw new \Exception("Unknown unit type: $type");
         }
     }
 }

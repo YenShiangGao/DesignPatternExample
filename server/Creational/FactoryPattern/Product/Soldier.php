@@ -1,12 +1,12 @@
 <?php
 
-namespace FactoryPatterm\Product;
+namespace FactoryPattern\Product;
 
 require_once __DIR__.'/UnitInterface.php';
 
-class Solider implements UnitInterface
+class Soldier implements UnitInterface
 {
-    const NAME = 'Solider';
+    const NAME = 'Soldier';
 
     public function playSlogan()
     {

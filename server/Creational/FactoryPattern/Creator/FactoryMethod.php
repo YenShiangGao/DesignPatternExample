@@ -1,9 +1,9 @@
 <?php
 
-namespace FactoryPatterm\Creator;
+namespace FactoryPattern\Creator;
 
 require_once dirname(__DIR__).'/Product/Worker.php';
-require_once dirname(__DIR__).'/Product/Solider.php';
+require_once dirname(__DIR__).'/Product/Soldier.php';
 require_once dirname(__DIR__).'/Product/Aircraft.php';
 
 abstract class FactoryMethod

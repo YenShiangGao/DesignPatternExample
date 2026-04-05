@@ -1,4 +1,7 @@
 <?php
+
+namespace Decorator;
+
 require_once __DIR__ . '/ToppingDecorator.php';
 
 class Egg extends ToppingDecorator

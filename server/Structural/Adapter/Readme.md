@@ -1,25 +1,43 @@
 ```mermaid
 classDiagram
     class PaymentGateway {
-        +charge(amount: int) string
+        <<interface>>
+        +charge(amount: int)
+        +refund(amount: int)
     }
 
-    class StripeSdk {
-        +createCharge(amountInCents: int) string
+    class BTCSdk {
+        +createBtcCharge(amount: int) string
+        +createBtcRefund(amount: int) string
     }
 
-    class StripeAdapter {
-        -stripe: StripeSdk
-        +__construct(stripe: StripeSdk)
+    class USDTSdk {
+        +createUsdtCharge(amount: int) string
+        +createUsdtRefund(amount: int) string
+    }
+
+    class BTCAdapter {
+        -btcSdk: BTCSdk
+        +__construct(sdk: BTCSdk)
         +charge(amount: int) string
+        +refund(amount: int) string
+    }
+
+    class USDTAdapter {
+        -usdtSdk: USDTSdk
+        +__construct(sdk: USDTSdk)
+        +charge(amount: int)
+        +refund(amount: int)
     }
 
     class Client {
         +processPayment(gateway: PaymentGateway)
     }
 
-    PaymentGateway <|.. StripeAdapter
-    StripeAdapter --> StripeSdk
+    PaymentGateway <|.. BTCAdapter
+    PaymentGateway <|.. USDTAdapter
+    BTCAdapter --> BTCSdk
+    USDTAdapter --> USDTSdk
     Client --> PaymentGateway : uses
 ```
 
