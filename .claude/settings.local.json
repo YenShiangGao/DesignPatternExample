@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git:*)",
+      "Bash(mkdir -p D:/DesignPatternExample/docs/.vitepress/theme/style)",
+      "Bash(mkdir -p D:/DesignPatternExample/docs/components)",
+      "Bash(mkdir -p D:/DesignPatternExample/docs/composables)",
+      "Bash(mkdir -p D:/DesignPatternExample/docs/public)",
+      "Bash(mkdir -p D:/DesignPatternExample/docs/creational)",
+      "Bash(npm install:*)",
+      "Bash(npx vitepress:*)",
+      "Bash(ls D:/DesignPatternExample/docs/.vitepress/dist/assets/*.js)"
+    ]
+  }
+}
