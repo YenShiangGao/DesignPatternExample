@@ -30,11 +30,11 @@ const exerciseFiles = [
     ].join('\n')
   },
   {
-    filename: 'TerranSolider.php',
+    filename: 'TerranSoldier.php',
     code: [
       '<?php',
       '',
-      'class TerranSolider extends TerranUnit',
+      'class TerranSoldier extends TerranUnit',
       '{',
       '    public function playSlogan()',
       '    {',
@@ -102,7 +102,7 @@ const exerciseFiles = [
       '/**',
       ' * TODO: 實作 Barrack 工廠',
       ' * 1. 繼承 BuildFactory',
-      ' * 2. outputTerranUnit() 回傳 new TerranSolider()',
+      ' * 2. outputTerranUnit() 回傳 new TerranSoldier()',
       ' * 3. outputProtossUnit() 回傳 new ProtossZealot()',
       ' */',
     ].join('\n')
@@ -157,9 +157,9 @@ const answerFiles = [
       '',
       'class Barrack extends BuildFactory',
       '{',
-      '    public function outputTerranUnit(): TerranSolider',
+      '    public function outputTerranUnit(): TerranSoldier',
       '    {',
-      '        return new TerranSolider();',
+      '        return new TerranSoldier();',
       '    }',
       '',
       '    public function outputProtossUnit(): ProtossZealot',
@@ -181,12 +181,12 @@ classDiagram
     BuildFactory <|-- CommandCenter
     BuildFactory <|-- Barrack
     TerranWorker ..|> TerranUnit
-    TerranSolider ..|> TerranUnit
+    TerranSoldier ..|> TerranUnit
     ProtossWorker ..|> ProtossUnit
     ProtossZealot ..|> ProtossUnit
     CommandCenter --> TerranWorker
     CommandCenter --> ProtossWorker
-    Barrack --> TerranSolider
+    Barrack --> TerranSoldier
     Barrack --> ProtossZealot
     class BuildFactory {
         <<abstract>>
@@ -224,7 +224,7 @@ classDiagram
     :files="exerciseFiles"
     :answer-files="answerFiles"
     entry-file="index.php"
-    :readonly-files="['TerranUnit.php', 'TerranWorker.php', 'TerranSolider.php', 'ProtossUnit.php', 'ProtossWorker.php', 'ProtossZealot.php', 'BuildFactory.php', 'CommandCenter.php', 'index.php']"
+    :readonly-files="['TerranUnit.php', 'TerranWorker.php', 'TerranSoldier.php', 'ProtossUnit.php', 'ProtossWorker.php', 'ProtossZealot.php', 'BuildFactory.php', 'CommandCenter.php', 'index.php']"
   />
 </ClientOnly>
 

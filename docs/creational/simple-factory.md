@@ -76,7 +76,7 @@ const exerciseFiles = [
       '     * TODO: 實作 createUnit 靜態方法',
       '     * 根據傳入的 $type 參數建立對應的單位',
       '     * - "marauder" => 回傳 new Marauder()',
-      '     * - "Marine" => 回傳 new Marine()',
+      '     * - "marine" => 回傳 new Marine()',
       '     * 提示: 使用 switch 或 match 語法',
       '     */',
       '    public static function createUnit($type)',
@@ -110,7 +110,7 @@ const exerciseFiles = [
       '',
       '$building = new BuildCenter();',
       '$building->outputUnit("marauder");',
-      '$building->outputUnit("Marine");',
+      '$building->outputUnit("marine");',
     ].join('\n')
   }
 ]
@@ -131,8 +131,10 @@ const answerFiles = [
       '        switch ($type) {',
       '            case "marauder":',
       '                return new Marauder();',
-      '            case "Marine":',
+      '            case "marine":',
       '                return new Marine();',
+      '            default:',
+      '                throw new \\Exception("Unknown unit type: $type");',
       '        }',
       '    }',
       '}',

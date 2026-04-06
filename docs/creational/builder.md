@@ -14,17 +14,17 @@ const exerciseFiles = [
       '    public string $name;',
       '    public int $health;',
       '    public int $attack;',
-      '    public int $armor;',
+      '    public int $defense;',
       '    public int $speed;',
       '',
       '    public function describe(): string',
       '    {',
       '        return sprintf(',
-      '            "Unit: %s, Health: %d, Attack: %d, Armor: %d, Speed: %d",',
+      '            "Unit: %s, Health: %d, Attack: %d, Defense: %d, Speed: %d",',
       '            $this->name,',
       '            $this->health,',
       '            $this->attack,',
-      '            $this->armor,',
+      '            $this->defense,',
       '            $this->speed',
       '        );',
       '    }',
@@ -59,7 +59,7 @@ const exerciseFiles = [
       ' * 3. 每個 set 方法設定 Unit 屬性後回傳 $this（流式接口）',
       ' * 4. build() 回傳完成的 Unit 物件',
       ' *',
-      ' * 提示: setDefense() 設定的是 $this->unit->armor',
+      ' * 提示: setDefense() 設定的是 $this->unit->defense',
       ' */',
     ].join('\n')
   },
@@ -149,7 +149,7 @@ const answerFiles = [
       '',
       '    public function setDefense(int $defense): UnitBuilderInterface',
       '    {',
-      '        $this->unit->armor = $defense;',
+      '        $this->unit->defense = $defense;',
       '        return $this;',
       '    }',
       '',
@@ -161,7 +161,9 @@ const answerFiles = [
       '',
       '    public function build(): Unit',
       '    {',
-      '        return $this->unit;',
+      '        $result = $this->unit;',
+      '        $this->unit = new Unit();',
+      '        return $result;',
       '    }',
       '}',
     ].join('\n')
@@ -193,7 +195,7 @@ classDiagram
         +string name
         +int health
         +int attack
-        +int armor
+        +int defense
         +int speed
         +describe() string
     }
@@ -242,7 +244,7 @@ classDiagram
 
 ::: tip 預期輸出
 ```
-Unit: Marine, Health: 40, Attack: 6, Armor: 0, Speed: 5
-Unit: Firebat, Health: 50, Attack: 8, Armor: 0, Speed: 4
+Unit: Marine, Health: 40, Attack: 6, Defense: 0, Speed: 5
+Unit: Firebat, Health: 50, Attack: 8, Defense: 0, Speed: 4
 ```
 :::

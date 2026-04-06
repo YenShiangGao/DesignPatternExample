@@ -32,13 +32,13 @@ const exerciseFiles = [
     ].join('\n')
   },
   {
-    filename: 'Solider.php',
+    filename: 'Soldier.php',
     code: [
       '<?php',
       '',
-      'class Solider implements UnitInterface',
+      'class Soldier implements UnitInterface',
       '{',
-      "    const NAME = 'Solider';",
+      "    const NAME = 'Soldier';",
       '',
       '    public function playSlogan()',
       '    {',
@@ -99,7 +99,7 @@ const exerciseFiles = [
       ' * TODO: 實作 Barrack 生產者類別',
       ' * 1. 繼承 FactoryMethod',
       ' * 2. 實作 outputUnit() 方法',
-      ' * 3. 回傳 new Solider()',
+      ' * 3. 回傳 new Soldier()',
       ' */',
     ].join('\n')
   },
@@ -165,9 +165,9 @@ const answerFiles = [
       '',
       'class Barrack extends FactoryMethod',
       '{',
-      '    public function outputUnit(): Solider',
+      '    public function outputUnit(): Soldier',
       '    {',
-      '        return new Solider();',
+      '        return new Soldier();',
       '    }',
       '}',
     ].join('\n')
@@ -214,7 +214,7 @@ classDiagram
     FactoryMethod <|-- Barrack
     FactoryMethod <|-- Airport
     Worker ..|> UnitInterface
-    Solider ..|> UnitInterface
+    Soldier ..|> UnitInterface
     Aircraft ..|> UnitInterface
     class FactoryMethod {
         <<abstract>>
@@ -225,7 +225,7 @@ classDiagram
         +outputUnit() Worker
     }
     class Barrack {
-        +outputUnit() Solider
+        +outputUnit() Soldier
     }
     class Airport {
         +outputUnit() Aircraft
@@ -268,7 +268,7 @@ classDiagram
     :files="exerciseFiles"
     :answer-files="answerFiles"
     entry-file="index.php"
-    :readonly-files="['UnitInterface.php', 'Worker.php', 'Solider.php', 'Aircraft.php', 'FactoryMethod.php', 'CommandCenter.php', 'index.php']"
+    :readonly-files="['UnitInterface.php', 'Worker.php', 'Soldier.php', 'Aircraft.php', 'FactoryMethod.php', 'CommandCenter.php', 'index.php']"
   />
 </ClientOnly>
 
@@ -279,7 +279,7 @@ Worker加入生產陣列
 生產完成!
 SUV準備好了，長官你想蓋啥建築呢?
 
-Solider加入生產陣列
+Soldier加入生產陣列
 等待一下，正在生產中...
 生產完成!
 想嘗嘗我的厲害嗎!小子。
