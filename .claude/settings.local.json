@@ -11,7 +11,8 @@
       "Bash(npx vitepress:*)",
       "Bash(ls D:/DesignPatternExample/docs/.vitepress/dist/assets/*.js)",
       "Bash(find:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(php index.php)"
     ]
   }
 }

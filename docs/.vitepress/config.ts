@@ -17,6 +17,7 @@ export default withMermaid(
         { text: '首頁', link: '/' },
         { text: '建立型模式', link: '/creational/singleton' },
         { text: '結構型模式', link: '/structural/adapter' },
+        { text: '行為型模式', link: '/behavior/strategy' },
       ],
 
       sidebar: [
@@ -41,6 +42,13 @@ export default withMermaid(
             { text: '組合模式 Composite', link: '/structural/composite' },
             { text: '裝飾模式 Decorator', link: '/structural/decorator' },
             { text: '外觀模式 Facade', link: '/structural/facade' },
+          ]
+        },
+        {
+          text: '行為型模式 Behavior',
+          collapsed: false,
+          items: [
+            { text: '策略模式 Strategy', link: '/behavior/strategy' },
           ]
         }
       ],
